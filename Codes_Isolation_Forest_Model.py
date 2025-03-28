@@ -146,7 +146,7 @@ def train_and_evaluate(df, modification_type, percentage):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
     #  Train Isolation Forest Model
-    model = IsolationForest(n_estimators=100, contamination=0.1, random_state=42)
+    model = IsolationForest(n_estimators=100, contamination=0.02, random_state=42)
     model.fit(X_train)
 
     #  Predict Anomalies
