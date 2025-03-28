@@ -7,7 +7,6 @@ import pandas as pd
 import seaborn as sns
 import random
 import matplotlib.pyplot as plt
-import os
 from sklearn.ensemble import IsolationForest
 #!pip install tensorflow
 import tensorflow as tf
@@ -16,10 +15,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix
 from sklearn.preprocessing import MinMaxScaler
-for dirname, _, filenames in os.walk('/kaggle/input'):
-    for filename in filenames:
-        print(os.path.join(dirname, filename))
-
 
 #Read data files and provide basic information
 data = pd.read_csv("C:/Users/fvuse/OneDrive/Documents/IOT_temp.csv")
