@@ -106,9 +106,6 @@ df["time"] = pd.to_datetime(df["time"], format="%H:%M").dt.hour * 60 + pd.to_dat
 df.head()
 
 
-#  Creating the anomaly column
-df["anomaly"] = ((df["temp"] < df["temp"].quantile(0.05)) | (df["temp"] > df["temp"].quantile(0.97))).astype(int)
-
 #  Function to Modify Data
 def modify_data(df, percentage):
     df_modified = df.copy()
